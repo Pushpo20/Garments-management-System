@@ -1,4 +1,3 @@
-
 package ooplabtask3;
 
 import java.util.List;
@@ -24,6 +23,7 @@ class Garment {
         return discount;
     }
 }
+
 class Fabric {
 
     public String id;
@@ -36,6 +36,7 @@ class Fabric {
         return newPrice;
     }
 }
+
 class Supplier {
 
     public String id;
@@ -52,6 +53,7 @@ class Supplier {
         return suppliedFabric;
     }
 }
+
 class Order {
 
     public String orderId;
@@ -95,8 +97,8 @@ class Customer {
         System.out.println("Order Placed");
     }
 
-
 }
+
 class Inventory {
 
     List<Garment> garments;
@@ -111,17 +113,24 @@ class Inventory {
 
     Garment findGarment(String id) {
         for (Garment g : garments) {
-            if(g.id == id)
+            if (g.id == id) {
                 return g;
+            }
         }
         return null;
     }
 }
+
 public class OopLabTask3 {
 
- 
     public static void main(String[] args) {
-        System.out.println("");
+        Garment g1 = new Garment();
+        g1.name = "Silk";
+        g1.description = "Good Product";
+        g1.price = 600;
+        double x = g1.calculateDiscountPrice(10);
+        System.out.println(x);
+
     }
-    
+
 }
